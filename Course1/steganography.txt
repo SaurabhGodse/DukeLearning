@@ -1,0 +1,53 @@
+// write your code here
+function crop(image, w, h){
+    var img = new SimpleImage(w, h);
+    for(var p of img.values()){
+        var x = p.getX();
+        var y = p.getY();
+        img.setPixel(x, y, image.getPixel(x, y));
+    }
+    return img;
+}
+
+function clearbits(pixval){
+    return Math.floor(pixval / 16) * 16;
+}
+function crop2hide(image){
+    for(var p of image.values()){
+        p.setRed(clearbits(p.getRed()));
+        p.setGreen(clearbits(p.getGreen()));
+        p.setBlue(clearbits(p.getBlue()));
+    }
+    return image;
+}
+
+function shift(image){
+    for(var p of image.values()){
+        p.setRed(Math.floor(p.getRed() / 16));
+        p.setGreen(Math.floor(p.getGreen() / 16));
+        p.setBlue(Math.floor(p.getBlue() / 16));
+    }
+    return image;
+}
+
+function combine(start, hide){
+    var image = new SimpleImage(start.width, start.height);
+    for(var p of image.values()){
+        var x = p.getX();
+        var y = p.getY();
+        var startPixel = start.getPixel(x, y);
+        var hidePixel = hide.getPixel(x, y);
+        p.setRed(startPixel.getRed() + hidePixel.getRed());
+        p.setGreen(startPixel.getGreen() + hidePixel.getGreen());
+        p.setBlue(startPixel.getBlue() + hidePixel.getBlue());
+    }
+    return image;
+}
+var start = new SimpleImage("universe.jpg");
+start = crop(start, 400, 300);
+var hide = new SimpleImage("impossible.jpg");
+hide = crop(hide, 400, 300);
+start = crop2hide(start);
+hide = shift(hide);
+var newimage = combine(start, hide);
+print(newimage.height);
