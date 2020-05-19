@@ -33,7 +33,7 @@ public class ParsingExport {
         int count = 0;
         for(CSVRecord record : parser){
             String export = record.get("Exports");
-            System.out.println(export);
+            //System.out.println(export);
             if(export.contains(expitem)){
                 count += 1;
             }
@@ -54,10 +54,10 @@ public class ParsingExport {
         FileResource fr = new FileResource();
         CSVParser parser = fr.getCSVParser();
         //System.out.println(countryInfo(parser, "Nauru"));
-        //listExportersTwoProducts(parser, "fish", "nuts");
-        //System.out.println("Number of exporters : " + numberOfExporters(parser, "sugar"));
+        //listExportersTwoProducts(parser, "cotton", "flowers");
+        //System.out.println("Number of exporters : " + numberOfExporters(parser, "cocoa"));
         //System.out.println("Big exporters are : ");
-        bigExporters(parser, "$999,999,999,999");
+        //bigExporters(parser, "$999,999,999,999");
         
         
         
