@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=USBabyDetails
+comment0.text=\n\ Write\ a\ description\ of\ USBabyDetails\ here.\n\ \n\ @author\ Saurabh\ Godse\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=record
+comment1.target=boolean\ isboy(org.apache.commons.csv.CSVRecord)
+comment10.params=
+comment10.target=void\ tester()
+comment2.params=
+comment2.target=void\ totalBirths()
+comment3.params=name\ gender\ year
+comment3.target=int\ getRank(java.lang.String,\ java.lang.String,\ int)
+comment4.params=name\ gender\ fr
+comment4.target=int\ getRankInFile(java.lang.String,\ java.lang.String,\ edu.duke.FileResource)
+comment5.params=gender\ rank\ year
+comment5.target=java.lang.String\ getName(java.lang.String,\ int,\ int)
+comment6.params=name\ gender\ year\ newyear
+comment6.target=void\ whatIsNameInYear(java.lang.String,\ java.lang.String,\ int,\ int)
+comment7.params=name\ gender
+comment7.target=java.lang.String\ yearOfHighestRank(java.lang.String,\ java.lang.String)
+comment8.params=name\ gender
+comment8.target=double\ getAverageRank(java.lang.String,\ java.lang.String)
+comment9.params=name\ gender\ year
+comment9.target=int\ getTotalBirthsRankedHigher(java.lang.String,\ java.lang.String,\ int)
+numComments=11
