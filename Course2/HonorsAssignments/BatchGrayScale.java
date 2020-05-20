@@ -20,6 +20,19 @@ public class BatchGrayScale {
     return outImage;
     }
     
+    public void selectAndConvert(){
+        DirectoryResource dr = new DirectoryResource();
+        for(File f : dr.selectedFiles()){
+            ImageResource inImage = new ImageResource(f);
+            ImageResource outImage = makeGray(inImage);
+            String name = inImage.getFileName();
+            String newName = "Images/copy-" + name;
+            outImage.setFileName(newName);
+            outImage.draw();
+            outImage.save();
+            
+        }
+    }
     public void testGray(){
         ImageResource inImage = new ImageResource();
         ImageResource outImage = makeGray(inImage);
