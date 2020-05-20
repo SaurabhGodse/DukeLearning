@@ -1,4 +1,8 @@
 #BlueJ class context
 comment0.target=ImageInversion
 comment0.text=\n\ Write\ a\ description\ of\ ImageInversion\ here.\n\ \n\ @author\ Saurabh\ Godse\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-numComments=1
+comment1.params=inImage
+comment1.target=edu.duke.ImageResource\ makeInvert(edu.duke.ImageResource)
+comment2.params=
+comment2.target=void\ selectAndConvert()
+numComments=3
