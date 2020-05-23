@@ -17,11 +17,12 @@ public class WordLengths {
             if(!Character.isLetter(word.charAt(0))){
                 wordLen -= 1;
             }
-            if(wordLen < len){
-                counts[wordLen] += 1;
-            }
-            else{
+            if(wordLen > len){
                 counts[len - 1] += 1;
+            }
+            
+            if(wordLen > 0){
+                counts[wordLen] += 1;
             }
             
         }

@@ -79,11 +79,11 @@ public class CaeserCipher {
         
     }
     public void testCaeser(){
-        String encrypted = encrypt("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!", 15);
-        System.out.println("Encrypted string : " + encrypted);
-        String decrypted = encrypt(encrypted, 6);
-        System.out.println("Decrypted string : " + decrypted);
-        System.out.println("Encrypted string : " + encryptTwoKeys("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!", 8, 21));
+        //String encrypted = encrypt("Can you imagine life WITHOUT the internet AND computers in your pocket?", 15);
+        //System.out.println("Encrypted string : " + encrypted);
+        //String decrypted = encrypt(encrypted, 6);
+        //System.out.println("Decrypted string : " + decrypted);
+        System.out.println("Encrypted string : " + encryptTwoKeys("Can you imagine life WITHOUT the internet AND computers in your pocket?", 21, 8));
     }
 
 }
