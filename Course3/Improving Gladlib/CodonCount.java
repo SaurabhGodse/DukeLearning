@@ -15,6 +15,7 @@ public class CodonCount {
     }
     
     private void buildCodonMap(String dna, int start){
+        codonFreq.clear();
         int len = dna.length();
 
         for(int i = start; i + 2 < len; i += 3){
@@ -26,6 +27,7 @@ public class CodonCount {
                 codonFreq.put(codon, 1);
             }
         }
+        System.out.println(start + " : Number of unique codons : " + codonFreq.size()); 
     }
     
     private String getMostCommonCodon(){
@@ -38,6 +40,7 @@ public class CodonCount {
                 maxfreq = freq;
             }
         }
+        System.out.println("codon that occurs most : " + mostcommon + " with freq : " + maxfreq);
         return mostcommon;
     }
     
@@ -55,9 +58,11 @@ public class CodonCount {
         FileResource fr = new FileResource();
         String dna = fr.asString().toLowerCase();
         buildCodonMap(dna, 0);
-        buildCodonMap(dna, 1);
-        buildCodonMap(dna, 2);
-        System.out.println("Most common : " + getMostCommonCodon());
+        //buildCodonMap(dna, 1);
+        //buildCodonMap(dna, 2);
+        //getMostCommonCodon();
+        printCodonCounts(7, 7);
+        //System.out.println("Most common : " + getMostCommonCodon());
         
     }
 }

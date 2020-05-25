@@ -60,7 +60,7 @@ public class CharactersInPlay {
         for(int i = 0; i < myFreqs.size(); i++){
             int temp = myFreqs.get(i);
             if(num1 <= temp && temp <= num2){
-                System.out.println(myWords.get(i));
+                System.out.println(myWords.get(i) + " : " + temp);
             }
         }
     }
