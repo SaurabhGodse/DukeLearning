@@ -75,7 +75,7 @@ public class WordsInFiles {
             addWordsFromFile(f);
         }
         //System.out.println(wordsInNumFiles(4).size());
-        for(String name : fileMap.get("laid")){
+        for(String name : fileMap.get("tree")){
             System.out.println(name);
         }
     }
