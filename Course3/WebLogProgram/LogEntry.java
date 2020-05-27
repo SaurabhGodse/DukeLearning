@@ -2,7 +2,7 @@
 /**
  * Write a description of class LogRecord here.
  * 
- * @author (your name) 
+ * @author Saurabh Godse 
  * @version (a version number or a date)
  */
 
