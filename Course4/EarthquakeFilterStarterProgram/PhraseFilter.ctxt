@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=PhraseFilter
+comment0.text=\n\ Write\ a\ description\ of\ PhraseFilter\ here.\n\ \n\ @author\ Saurabh\ Godse\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=a\ b
+comment1.target=PhraseFilter(java.lang.String,\ java.lang.String)
+comment2.params=qe
+comment2.target=boolean\ satisfies(QuakeEntry)
+numComments=3
