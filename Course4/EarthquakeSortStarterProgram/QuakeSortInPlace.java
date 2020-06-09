@@ -65,7 +65,7 @@ public class QuakeSortInPlace {
     }
     
     public void sortByLargestDepth(ArrayList<QuakeEntry> quakeData){
-        for(int i = 0; i < 70; i++){
+        for(int i = 0; i < 50; i++){
             int max = getLargestDepth(quakeData, i);
             QuakeEntry largest = quakeData.get(max);
             QuakeEntry current = quakeData.get(i);
@@ -115,7 +115,7 @@ public class QuakeSortInPlace {
         EarthQuakeParser parser = new EarthQuakeParser(); 
         //String source = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom";
         //String source = "data/nov20quakedatasmall.atom";
-        String source = "data/earthQuakeDataDec6sample1.atom";
+        String source = "data/earthQuakeDataWeekDec6sample1.atom";
         //String source = "data/nov20quakedata.atom";
         ArrayList<QuakeEntry> list  = parser.read(source);  
        
