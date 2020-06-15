@@ -1,18 +1,15 @@
-
+import java.util.*;
 /**
- * Write a description of class MarkovWordOne here.
+ * Write a description of MarkovWordTwo here.
  * 
- * @author Saurabh Godse
+ * @author Saurabh Godse 
  * @version (a version number or a date)
  */
-
-import java.util.*;
-
-public class MarkovWordOne implements IMarkovModel {
+public class MarkovWordTwo implements IMarkovModel {
     private String[] myText;
     private Random myRandom;
     
-    public MarkovWordOne() {
+    public MarkovWordTwo() {
         myRandom = new Random();
     }
     
@@ -26,12 +23,15 @@ public class MarkovWordOne implements IMarkovModel {
     
     public String getRandomText(int numWords){
         StringBuilder sb = new StringBuilder();
-        int index = myRandom.nextInt(myText.length-1);  // random word to start with
-        String key = myText[index];
-        sb.append(key);
+        int index = myRandom.nextInt(myText.length-2);  // random word to start with
+        String key1 = myText[index];
+        String key2 = myText[index + 1];
+        sb.append(key1);
         sb.append(" ");
-        for(int k=0; k < numWords-1; k++){
-            ArrayList<String> follows = getFollows(key);
+        sb.append(key2);
+        sb.append(" ");
+        for(int k=0; k < numWords-2; k++){
+            ArrayList<String> follows = getFollows(key1, key2);
             //System.out.println(key + " : " + follows);
             if (follows.size() == 0) {
                 break;
@@ -40,27 +40,29 @@ public class MarkovWordOne implements IMarkovModel {
             String next = follows.get(index);
             sb.append(next);
             sb.append(" ");
-            key = next;
+            key1 = key2;
+            key2 = next;
         }
         
     return sb.toString().trim();
     }
     
-    private int indexOf(String [] words, String target, int start){
-        for(int i = start; i < words.length; i++)
-            if(words[i].equals(target))
+    private int indexOf(String [] words, String target1, String target2, int start){
+        String target = target1 + " " + target2;
+        for(int i = start; i < words.length - 1; i++)
+            if(target.equals(words[i] + " " + words[i + 1]))
                 return i;
         return -1;
     }
     
-    private ArrayList<String> getFollows(String key) {
+    private ArrayList<String> getFollows(String key1, String key2) {
         ArrayList<String> follows = new ArrayList<String>();
         int pos = 0;
         while(pos < myText.length){
-            int start = indexOf(myText, key, pos);
+            int start = indexOf(myText, key1, key2, pos);
             if(start == -1)
                 break;
-            pos = start + 1;
+            pos = start + 2;
             if(pos < myText.length){
                 String next = myText[pos];
                 follows.add(next);
@@ -73,8 +75,9 @@ public class MarkovWordOne implements IMarkovModel {
     public void testIndexOf(){
         String s = "this is just a test yes this is a simple test";
         String [] words = s.split(" ");
-        System.out.println(indexOf(words, "this", 3));
-        System.out.println(indexOf(words, "frog", 3));
+        System.out.println(indexOf(words, "this", "is", 0));
+        System.out.println(indexOf(words, "frog", "of", 1));
     }
+
 
 }
