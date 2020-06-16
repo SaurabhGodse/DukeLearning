@@ -7,7 +7,7 @@ public class WordGramTester {
 		int size = 4;
 		for(int index = 0; index <= words.length - size; index += 1) {
 			WordGram wg = new WordGram(words,index,size);
-			System.out.println(index+"\t"+wg.length()+"\t"+wg);
+			System.out.println(index+"\t"+wg.length()+"\t"+wg + "\t" + wg.shiftAdd("yo").toString());
 		}
 	}
 	

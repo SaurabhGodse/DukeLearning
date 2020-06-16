@@ -21,7 +21,7 @@ public class Tester {
         
         MarkovOne markov = new MarkovOne();
         markov.setTraining(st);
-        System.out.println(markov.getFollows("th").size());
+        System.out.println(markov.getFollows("he").size());
         
     }
 

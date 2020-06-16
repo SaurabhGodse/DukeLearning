@@ -31,11 +31,18 @@ public class MarkovRunner {
     public void runMarkov() { 
         FileResource fr = new FileResource(); 
         String st = fr.asString(); 
-        st = st.replace('\n', ' '); 
+        st = st.replace('\n', ' ');
+        EfficientMarkovWord mw = new EfficientMarkovWord(2);
+        runModel(mw, st, 200, 65);
         //MarkovWordOne markovWord = new MarkovWordOne(); 
         //runModel(markovWord, st, 200); 
     } 
-
+    
+    public void testHashMap(){
+        EfficientMarkovWord emw = new EfficientMarkovWord(2);
+        runModel(emw, "this is a test yes this is really a test yes a test this is wow", 50, 42);
+    }
+    
     private void printOut(String s){
         String[] words = s.split("\\s+");
         int psize = 0;

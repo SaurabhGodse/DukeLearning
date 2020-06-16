@@ -38,7 +38,7 @@ public class MarkovRunnerWithInterface {
         runModel(mFour, st, size, 1);*/
         
         EfficientMarkovModel emm = new EfficientMarkovModel(5);
-        runModel(emm, st, size, 615);
+        runModel(emm, st, size, 531);
 
     }
     
