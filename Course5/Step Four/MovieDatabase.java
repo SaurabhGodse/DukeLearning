@@ -32,9 +32,9 @@ public class MovieDatabase {
             ourMovies = new HashMap<String,Movie>();
             loadMovies("data/ratedmoviesfull.csv");
         }
-    }	
+    }   
 
-	
+    
     private static void loadMovies(String filename) {
         FirstRatings fr = new FirstRatings();
         ArrayList<Movie> list = fr.loadMovies(filename);

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=RecommendationRunner
+comment0.text=\n\ Write\ a\ description\ of\ RecommendationRunner\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=java.util.ArrayList\ getItemsToRate()
+comment2.params=minutes
+comment2.target=java.lang.String\ getDuration(int)
+comment3.params=id
+comment3.target=java.lang.String\ addMovie(java.lang.String)
+comment4.params=webRaterID
+comment4.target=void\ printRecommendationsFor(java.lang.String)
+comment5.params=
+comment5.target=void\ runner()
+numComments=6
